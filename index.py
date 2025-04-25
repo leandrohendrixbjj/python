@@ -1,9 +1,12 @@
-from Sintaxe.helper.limpa_tela import limpa_tela
-limpa_tela()
+import bcrypt
 
-data = [1,2,3]
-count = 0
+# Senha que você quer hashear
+senha = "121212"
 
-while(count < len(data)):
-    print(data[count])
-    count = count + 1
+# Gerando o salt
+salt = bcrypt.gensalt(rounds=12)  # rounds=12 é o fator de custo
+
+# Gerando o hash bcrypt
+hashed = bcrypt.hashpw(senha.encode('utf-8'), salt)
+
+print(hashed)
