@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ff9e6fd-5afa-48c8-8653-f092916ce023" name="Changes" comment="" />
+    <list default="true" id="3ff9e6fd-5afa-48c8-8653-f092916ce023" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Sintaxe/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sintaxe/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +32,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/hendrix/estudos/python/Sintaxe",
+    "last_opened_file_path": "/home/hendrix/estudos/py/projetos/study",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,6 +58,7 @@
       <updated>1745009090302</updated>
       <workItem from="1745009092492" duration="141000" />
       <workItem from="1745151527753" duration="4467000" />
+      <workItem from="1745570991071" duration="429000" />
     </task>
     <servers />
   </component>
