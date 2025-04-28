@@ -1,14 +1,21 @@
 from app.infra.clear import clear
-from app.infra.lifespan import lifespan
-from fastapi import FastAPI
-from app.routes.router import router
+from app.model.menu import menu
+from app.controller.seek_controller import seek
+optionsList = ['1','2','3','4']
 
-clear()
+def main():
+    while True:
+        clear()
+        menu()
+        option = input("Select an option: ")
 
-app = FastAPI(lifespan=lifespan)
+        if not option in optionsList:
+            print('Please select an option from the list')
+            input("Enter select item from list option: ")
+            continue
+        seek(option)
 
-app.include_router(router)
 
 
 if __name__ == '__main__':
-    print('Welcome')
+    main()

@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend  # Caminho para o diretório que contém o Dockerfile
+    container_name: backend
+    environment:
+      - DATABASE_URL=postgresql://postgres:secret@db:5432/estudo
+      - TZ=America/Sao_Paulo
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: postgres:13
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=estudo      
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    ports:
+      - "5432:5432"   
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:
