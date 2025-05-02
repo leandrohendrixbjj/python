@@ -1,5 +1,1 @@
-nome = 'Soares'
-age = 30
-salary = 1000.50
-
-print(f'Hello %s, you are %d years old and your salary is %.2f' % (nome, age, salary))
+## VALIDAR ZIP
