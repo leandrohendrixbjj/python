@@ -1,4 +1,4 @@
-from helper.limpa_tela import *
+from helper.clear import *
 clear()
 
 data = 1.0

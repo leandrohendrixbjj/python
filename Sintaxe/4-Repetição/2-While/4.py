@@ -1,6 +1,6 @@
 # Pega os valores na Horizontal
 
-from helper.limpa_tela import *
+from helper.clear import *
 clear()
 
 idx = 1

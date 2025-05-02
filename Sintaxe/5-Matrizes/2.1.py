@@ -1,7 +1,7 @@
-# Impressão diagonal esquerda, CURTA: 1, 5, 9
+# Impressão diagonal esquerda, CURTA: 3,5,7
 
-import os
-os.system('cls' if os.name == 'nt' else 'clear')
+from helper.clear import clear
+clear()
 
 data = [
     [1, 2, 3],

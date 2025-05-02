@@ -1,7 +1,7 @@
 # While List
+from helper.clear import clear
 
-import os
-os.system('cls' if os.name == 'nt' else 'clear')
+clear()
 
 data = ['nodeJs', 'php', 'java']
 count = 0
