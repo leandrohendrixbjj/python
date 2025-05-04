@@ -22,4 +22,24 @@ def get_student_by_id(student_id: int = Path(..., description="Informe o ID do E
         raise HTTPException(status_code=404, detail='Student not found')
     return student
 
+@router.post('/students/', tags=['Students'])
+def create_student(student: dict) -> dict:
+    student_id = max(students.keys()) + 1
+    students[student_id] = student
+    return {'id': student_id, **student}
+
+@router.put('/students/{student_id}', tags=['Students'])
+def update_student(student: dict, student_id: int = Path(..., description="Informe o ID do Estudante", gt=0)) -> dict:
+    if student_id not in students:
+        raise HTTPException(status_code=404, detail='Student not found')
+    students[student_id] = student
+    return {'id': student_id, **student}
+
+@router.delete('/students/{student_id}', tags=['Students'])
+def delete_student(student_id: int = Path(..., description="Informe o ID do Estudante", gt=0)) -> dict:
+    if student_id not in students:
+        raise HTTPException(status_code=404, detail='Student not found')
+    del students[student_id]
+    return {'message': 'Student deleted successfully'}
+
 
