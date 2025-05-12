@@ -1,4 +1,7 @@
 
+from helper.clear import clear
+clear() 
+
 cabecalho = ["Nome", "Idade", "Profissão"]
 
 dados = [
