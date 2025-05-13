@@ -8,7 +8,3 @@ if x == y and type(x) == type(y):
     print("Equal")
 else:
     print("Not Equal")    
-
-
-
-
