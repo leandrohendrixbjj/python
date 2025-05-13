@@ -1,21 +1,12 @@
-from app.infra.clear import clear
-from app.model.menu import menu
-from app.controller.seek_controller import seek
-optionsList = ['1','2','3','4']
+from app.helper.clear import clear
+from fastapi import FastAPI
+from app.infra.lifespan import lifespan
+from app.routers.students import router as students_router
 
-def main():
-    while True:
-        clear()
-        menu()
-        option = input("Select an option: ")
+clear()
 
-        if not option in optionsList:
-            print('Please select an option from the list')
-            input("Enter select item from list option: ")
-            continue
-        seek(option)
+app = FastAPI(lifespan=lifespan)
 
+app.include_router(students_router)
 
-
-if __name__ == '__main__':
-    main()
+print('Welcome')

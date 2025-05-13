@@ -1,2 +1,0 @@
-restaurante_data = ['leandro']
-
