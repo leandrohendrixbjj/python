@@ -1,6 +1,8 @@
-data = {"nome": "Maria", "idade": 30}
-new_age = {"idade": 40}  # valor sobrescrito
+from helper import clear
 
-info = {**data, **new_age}
-print(info) #{'nome': 'Maria', 'idade': 40}
+clear.clear()
 
+data = 'leandro'
+
+if isinstance(data, (int, str)):
+    print('Data: is int or str')

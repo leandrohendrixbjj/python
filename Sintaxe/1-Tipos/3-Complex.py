@@ -1,6 +1,9 @@
 """"
-complex: é usado para representar números complexos, que são compostos por uma parte real 
+complex: é usado para representar números COMPLEXOS, que são compostos por uma parte real 
 e uma parte imaginária.
+
+Ele é útil em Em física, engenharia elétrica, processamento de sinais e 
+computação científica, onde números complexos são comuns.
 """
 
 # Tipo complex
