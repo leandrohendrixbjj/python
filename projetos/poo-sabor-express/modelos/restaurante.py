@@ -4,9 +4,13 @@ class Resturante:
   situacao = False
 
 
-rest = Resturante()
-rest_2 = Resturante()
+res = Resturante()
+res.nome = "Pizzaria do João"
+res.categoria = "Pizzaria"
+res.situacao = True
 
-data = [rest, rest_2]
+# Exibindo os métodos e atributos do objeto
+print(dir(res))  
 
-print(data)
+# Exibindo os atributos do objeto
+print(vars(res))
