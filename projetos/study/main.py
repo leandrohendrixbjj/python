@@ -1,12 +1,11 @@
-from app.helper.clear import clear
+from app.helper import clear
 from fastapi import FastAPI
 from app.infra.lifespan import lifespan
-from app.routers.students import router as students_router
+from app.routes.students import router as students_router
 
-clear()
+clear.screen()
 
 app = FastAPI(lifespan=lifespan)
 
 app.include_router(students_router)
 
-print('Welcome')

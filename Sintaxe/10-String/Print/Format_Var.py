@@ -1,12 +1,13 @@
+from helper.clear import clear
+clear()
+
+
 """
   Formatar strings:
     - %s: string
     - %d: inteiro
     - %f: float
 """
-
-from helper.clear import clear
-clear()
 
 nome = 'Soares'
 age = 30

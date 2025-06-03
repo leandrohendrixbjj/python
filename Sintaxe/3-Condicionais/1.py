@@ -1,8 +1,8 @@
-# Basic
+# if-else statement
 
-data = 10
+data = 3
 
-info = 'Great tha 1' if data > 5 else 'Great tha 2'
-
-print(info)
-print(data)
+if data > 5:
+    print('Data is greater than 5')
+else: 
+    print('Data is less than or equal to 5')    

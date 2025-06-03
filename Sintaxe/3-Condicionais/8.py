@@ -1,10 +1,18 @@
 from helper.clear import clear
 clear()
 
-x = 1
-y = '1'
+# Usamos essa função pq Phyton não interpreta == e ===
+def loose_comparison(a,b):
+    try:
+       return float(a) == float(b)
+    except (ValueError, ValueError):
+        return str(a) == str(b)
+        
 
-if x == y and type(x) == type(y):
-    print("Equal")
+data = 3
+info = '3.0'
+
+if loose_comparison(data, info):
+  print('They are equal')
 else:
-    print("Not Equal")    
+  print('They are not equal')

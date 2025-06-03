@@ -1,4 +1,7 @@
 import os
 
-def clear():
+def screen()-> object:
+    """
+    Clear the terminal screen.
+    """
     os.system('cls' if os.name == 'nt' else 'clear')
