@@ -16,3 +16,5 @@ pycharm-2025.1/
 # Arquivos do sistema
 .DS_Store
 Thumbs.db
+
+/projetos/subsub*
