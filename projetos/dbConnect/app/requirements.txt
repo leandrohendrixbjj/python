@@ -2,4 +2,5 @@ fastapi
 uvicorn
 asyncpg  # Para a conexão com o PostgreSQL
 sqlalchemy  # Caso esteja usando SQLAlchemy para ORM
+redis==5.0.4
 

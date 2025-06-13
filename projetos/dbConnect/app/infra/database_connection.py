@@ -10,7 +10,7 @@ async def connect_to_db():
             host='db',  # Nome do serviço no Docker
             port=5432
         )
-        print("Conectado ao banco de dados! 😊")
+        print("Conectado ao Postgre! 😊")
         return conn
     except Exception as e:
         raise HTTPException(
