@@ -1,5 +1,6 @@
 import os
 import logging
+import html
 from google.cloud import pubsub_v1
 from dotenv import load_dotenv
 
@@ -41,6 +42,10 @@ class PubSubPublisher:
         if not self.topic_id:
             raise ValueError("O nome do tópico não pode ser vazio.")
 
+    def sanitize_message(self, message: str) -> str:
+        """Sanitiza a mensagem para evitar injeções de HTML/JS."""
+        return html.escape(message.strip())        
+
 
     def publish(self, message: str, attributes: dict = None):
 
@@ -48,7 +53,8 @@ class PubSubPublisher:
             raise ValueError("A mensagem não pode ser vazia.")        
         
         try:
-            data = message.encode("utf-8")
+            message_to_publish = self.sanitize_message(message)
+            data = message_to_publish.encode("utf-8")
             future = self.publisher.publish(self.topic_path, data, **(attributes or {}))
             message_id = future.result()
             logger.info(f"Mensagem publicada com ID: {message_id}")
